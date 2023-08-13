@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email and Password Validation</title>
+</head>
+<body>
+  <form id="userForm">
+    <label for="email">Email:</label>
+    <input id="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" minlength="8" required>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="errorContainer"></div>
+
+
+
+</body>
+</html>
+
+<!-- <script>
+  const userForm = document.getElementById('userForm');
+  const errorContainer = document.getElementById('errorContainer');
+
+  userForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Implement your email and password validation client-side logic here
+
+    const response = await fetch('/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const result = await response.text();
+    errorContainer.textContent = result;
+  });
+</script> -->
